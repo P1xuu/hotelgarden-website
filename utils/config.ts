@@ -1,7 +1,8 @@
 import materialColors from 'material-colors';
 import {colord} from 'colord';
 
-export const API_KEY = 'AIzaSyDvamIugzBC3k3WA52KpHeINrfDHfkvnSs';
+// Read Google API key from window (injected at build/deploy time)
+export const API_KEY = (typeof window !== 'undefined' && (window as any).GOOGLE_API_KEY) || '';
 
 export const HEADER_HEIGHT = 60;
 
